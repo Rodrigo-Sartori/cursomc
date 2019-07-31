@@ -21,10 +21,18 @@ public class CategoriaResource {
 	private CategoriaService service;
 	
 	@RequestMapping(value ="/{id}", method = RequestMethod.GET)
+//	@GetMapping("/{id}")
 	public ResponseEntity<?> find (@PathVariable Integer id) {	
 		
 		Categoria obj = service.buscar(id);
 		return ResponseEntity.ok().body(obj);
 	}
 
+/**	@PostMapping()
+	
+	@PutMapping
+	
+	@DeleteMapping
+	
+	**/
 }
